@@ -1,0 +1,11 @@
+/Users/raymondcoklan/Documents/Coding_Dojo/csharp/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.csproj.CoreCompileInputs.cache
+/Users/raymondcoklan/Documents/Coding_Dojo/csharp/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.AssemblyInfoInputs.cache
+/Users/raymondcoklan/Documents/Coding_Dojo/csharp/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.AssemblyInfo.cs
+/Users/raymondcoklan/Documents/Coding_Dojo/csharp/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.deps.json
+/Users/raymondcoklan/Documents/Coding_Dojo/csharp/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.runtimeconfig.json
+/Users/raymondcoklan/Documents/Coding_Dojo/csharp/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.runtimeconfig.dev.json
+/Users/raymondcoklan/Documents/Coding_Dojo/csharp/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.dll
+/Users/raymondcoklan/Documents/Coding_Dojo/csharp/WeddingPlanner/bin/Debug/netcoreapp2.0/WeddingPlanner.pdb
+/Users/raymondcoklan/Documents/Coding_Dojo/csharp/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.dll
+/Users/raymondcoklan/Documents/Coding_Dojo/csharp/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.pdb
+/Users/raymondcoklan/Documents/Coding_Dojo/csharp/WeddingPlanner/obj/Debug/netcoreapp2.0/WeddingPlanner.csprojResolveAssemblyReference.cache

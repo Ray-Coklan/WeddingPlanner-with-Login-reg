@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Login Page";
+}
+@model WeddingPlanner.Models.LoginUser
+
+<h1>LOG IN:</h1>
+<form asp-action="LoginUser" asp-controller="Home" method="post">
+
+    <span asp-validation-for="Email"></span>
+    <br>
+    <label>Email Address:</label>
+    <input asp-for="Email" class="form-control">
+    <br>
+
+    <span asp-validation-for="Password"></span>
+    <br>
+    <label>Password:</label>
+    <input asp-for="Password" class="form-control">
+    <br>
+
+    <button class="btn btn-info green" type="submit">LOG IN</button>
+
+</form>
+<br>
+<form action="/">
+    <button class="btn btn-info green">REGISTER HERE</button>
+</form>

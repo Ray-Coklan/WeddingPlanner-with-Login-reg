@@ -1,0 +1,67 @@
+@{
+    ViewData["Title"] = "Wedding Dashboard";
+}
+@model WeddingPlanner.Models.Guest
+
+<h2>Hi @ViewBag.user.FirstName!</h2>
+<hr>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Wedding</th>
+            <th>Date</th>
+            <th>Guests</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@{
+    @foreach(var wedding in ViewBag.AllWeddings)
+    {
+        <tr>
+            <td><a href="/overview/@wedding.WeddingId" method="get">@wedding.WedderOne and @wedding.WedderTwo</a></td>
+            <td>@wedding.WeddingDate.ToString("D")</td>
+            <td>@wedding.Guests.Count</td>
+            @if(wedding.UserId == ViewBag.UserId)
+            {
+                <td><a href="/delete/@wedding.WeddingId">Delete</a></td>
+            }
+            else
+            {
+                @if(wedding.Guests.Count == 0) 
+                {
+                    <td><a href="rsvp/@wedding.WeddingId">RSVP</a></td>
+                }
+                else 
+                {
+                    bool found = false;
+                    @foreach(var banana in wedding.Guests) 
+                    {
+                        @if(@banana.UserId == @ViewBag.user.UserId) 
+                        {
+                            found = true;
+                        }
+                    }
+                    @if (found==true) 
+                    {
+                    <td><a href="unrsvp/@wedding.WeddingId">UN-RSVP</a></td>
+                    }
+                    else 
+                    {
+                    <td><a href="rsvp/@wedding.WeddingId">RSVP</a></td>
+                    }
+                }
+            }
+        </tr>
+    }
+}
+    </tbody>
+</table>
+<br>
+<form action="CreateWedding">
+    <button class="btn btn-info green" type="submit">NEW WEDDING</button>
+</form>
+<br>
+<form action="/logout" method="post">
+    <button class="btn btn-info logout green">LOG OUT</button>
+</form>

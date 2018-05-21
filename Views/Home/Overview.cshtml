@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "View Wedding";
+}
+
+<h1>@ViewBag.WeddingInfo.WedderOne & @ViewBag.WeddingInfo.WedderTwo</h1>
+<h3>Date: <span class="thicc">@ViewBag.WeddingInfo.WeddingDate.ToString("D")</span></h3>
+<h3>Address: <span class="thicc">@ViewBag.WeddingInfo.Address</span></h3>
+<hr>
+<h3>Guest List:</h3>
+@foreach (var wedding in @ViewBag.AllGuests)
+{
+    @foreach (var guest in wedding.Guests)
+    {
+        <blockquote>
+            <h4>@guest.user.FirstName @guest.user.LastName</h4>
+        </blockquote>
+    }
+}
+<br>
+<form action="/dash">
+    <button class="btn btn-info logout green">DASHBOARD</button>
+</form>
+<br>
+<form action="/logout" method="post">
+    <button class="btn btn-info logout green">LOG OUT</button>
+</form>
+<br>
+
+
+@foreach(var wedding in ViewBag.AllGuests)
+{
+<a href="/update/@wedding.WeddingId">Update</a>
+}
